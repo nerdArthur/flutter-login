@@ -107,22 +107,31 @@ class _MyHomePageState extends State<MyHomePage> {
                             ))),
                     SizedBox(height: 15),
                     SizedBox(height: 35),
-                    Container(
-                      height: 60,
-                      width: MediaQuery.of(context).size.width,
-                      // decoration: BoxDecoration(
-                      //   color: Colors.red,
-                      //   borderRadius: BorderRadius.all(Radius.circular(10.0)),
-                      // ),
-                      child: Center(
-                        child: ElevatedButton(
-                            onPressed: () {
-                              print('teste');
-                              print(_controllerEmail);
-                            },
-                            child: Text('Cadastrar')),
-                      ),
-                    ),
+                    ElevatedButton(
+                        onPressed: () {
+                          print(_controllerUsuario.text);
+                          print(_controllerEmail.text);
+                          print(_controllerSenha.text);
+                          save(_controllerEmail.text, _controllerUsuario.text,
+                              _controllerSenha.text);
+                        },
+                        child: Text('Cadastrar')),
+                    // Container(
+                    //   height: 60,
+                    //   width: MediaQuery.of(context).size.width,
+                    //   // decoration: BoxDecoration(
+                    //   //   color: Colors.red,
+                    //   //   borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                    //   // ),
+                    //   child: Center(
+                    //     child: ElevatedButton(
+                    //         onPressed: () {
+                    //           print('teste');
+                    //           print(_controllerEmail);
+                    //         },
+                    //         child: Text('Cadastrar')),
+                    //   ),
+                    // ),
                     SizedBox(height: 35),
                   ]))
         ])));
